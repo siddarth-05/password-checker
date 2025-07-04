@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Checker</title>
+</head>
+<body>
+    <h1>Password Strength & Breach Checker</h1>
+    <form method="post">
+        <input type="password" name="password" placeholder="Enter password" required>
+        <button type="submit">Check</button>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+        <p>{{ pwned }}</p>
+    {% endif %}
+</body>
+</html>
