@@ -1,7 +1,7 @@
 import re
 import hashlib
 import requests
-
+#my other repo has this code - I refactored it but the logic is essentially the same
 def password_strength(password: str) -> (bool, list):
     """Check password strength and return status and feedback."""
     feedback = []
