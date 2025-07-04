@@ -93,6 +93,12 @@ password-checker/
 
 ## Screenshots
 
+![image](https://github.com/user-attachments/assets/82d6a9f0-fab5-432a-92ee-e7b20d5e8fcc)
+(Testing the password "admin123")
+![image](https://github.com/user-attachments/assets/44aeaf04-bbd4-44a8-b273-fe451e40774a)
+(Testing the password "password")
+
+
 
 
 ---
