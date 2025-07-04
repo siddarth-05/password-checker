@@ -2,7 +2,8 @@ import re
 import hashlib
 import requests
 
-def password_strength(password: str) -> (bool, list):    
+def password_strength(password: str) -> (bool, list):
+    """Check password strength and return status and feedback."""
     feedback = []
     if len(password) < 14:
         feedback.append("Too short: use at least 14 characters.")
@@ -16,7 +17,8 @@ def password_strength(password: str) -> (bool, list):
         feedback.append("Add at least one special character.")
     return (len(feedback) == 0, feedback)
 
-def check_pwned(password: str) -> str:   
+def check_pwned(password: str) -> str:
+    """Check if the password has been exposed in data breaches."""
     sha1 = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
     prefix, suffix = sha1[:5], sha1[5:]
     url = f"https://api.pwnedpasswords.com/range/{prefix}"
@@ -37,3 +39,4 @@ if __name__ == "__main__":
         for f in feedback:
             print(f"- {f}")
     print(check_pwned(password))
+
